@@ -1,0 +1,10 @@
+{
+  "name": "VisionOCR - AI OCR Tool",
+  "description": "Google Vision AI आणि Gemini वापरून तयार केलेले एक शक्तिशाली OCR टूल. (OCR Tool built with Google Vision and Gemini AI)",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
