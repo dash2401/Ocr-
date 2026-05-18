@@ -99,9 +99,20 @@
 
         <hr style="margin: 20px 0; border: 0; border-top: 1px solid #e2e8f0;">
         
-        <button class="btn" id="openBtn" style="background: transparent; color: #2563eb; border: 1px solid #2563eb; box-shadow: none;">
-            Open Dashboard
-        </button>
+        <div id="settingsArea" style="display: none; margin-bottom: 15px;">
+            <p class="instruction" style="margin-bottom: 5px; font-weight: bold;">API URL Settings:</p>
+            <input type="text" id="apiUrlInput" style="width: 100%; border-radius: 4px; border: 1px solid #cbd5e1; padding: 6px; font-size: 10px; margin-bottom: 8px;">
+            <button class="btn" id="saveUrlBtn" style="background: #64748b; font-size: 10px; padding: 6px;">Save URL</button>
+        </div>
+
+        <div style="display: flex; gap: 8px;">
+            <button class="btn" id="openBtn" style="background: transparent; color: #2563eb; border: 1px solid #2563eb; box-shadow: none; flex: 1;">
+                Dashboard
+            </button>
+            <button class="btn" id="toggleSettingsBtn" style="background: #f8fafc; color: #64748b; border: 1px solid #e2e8f0; box-shadow: none; width: 40px; padding: 0;" title="Settings">
+                ⚙️
+            </button>
+        </div>
     </div>
     <style>
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

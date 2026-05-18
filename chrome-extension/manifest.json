@@ -5,7 +5,7 @@
   "description": "Extract text from any image using Google Vision AI.",
   "permissions": ["activeTab", "clipboardWrite"],
   "host_permissions": [
-    "https://ais-dev-tytpmka3k5pnccgi7ocix2-766376228082.asia-east1.run.app/*"
+    "https://*.run.app/*"
   ],
   "action": {
     "default_popup": "popup.html"

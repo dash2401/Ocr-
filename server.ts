@@ -21,7 +21,24 @@ const ai = new GoogleGenAI({
   }
 });
 
-app.use(cors());
+app.use(cors({
+  origin: (origin, callback) => {
+    // Chrome extensions have origins like chrome-extension://...
+    // We allow all origins for the OCR API
+    callback(null, true);
+  },
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
+app.options('*', cors());
+
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
 app.use(express.json());
 
 // Memory storage for multer
