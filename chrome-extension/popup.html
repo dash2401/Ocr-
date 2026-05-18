@@ -4,51 +4,86 @@
     <title>VisionOCR AI</title>
     <style>
         body {
-            width: 400px;
-            padding: 20px;
+            width: 320px;
+            padding: 0;
+            margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #FDFCFB;
+            background: #f1f5f9;
+            color: #334155;
         }
         .header {
+            background: #1d4ed8;
+            color: white;
+            padding: 16px;
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .logo {
-            background: #E29578;
-            color: white;
-            padding: 5px;
-            border-radius: 8px;
+        .logo-box {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
             font-weight: bold;
+            font-size: 14px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .instruction {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #64748b;
         }
         .btn {
-            background: #1D1D1F;
+            background: #2563eb;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 12px;
+            border-radius: 8px;
             cursor: pointer;
             width: 100%;
             font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+            transition: all 0.2s;
         }
-        .instruction {
-            font-size: 14px;
-            color: #86868B;
-            margin-bottom: 15px;
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+        .footer {
+            padding: 12px;
+            text-align: center;
+            font-size: 10px;
+            color: #94a3b8;
+            border-top: 1px solid #e2e8f0;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo">V</div>
-        <h3 style="margin: 0;">VisionOCR AI</h3>
+        <div class="logo-box">V</div>
+        <h3 style="margin: 0; font-size: 16px; letter-spacing: 0.5px;">VisionOCR AI</h3>
     </div>
-    <p class="instruction">
-        Full Web App वापरण्यासाठी खालील बटण दाबा. किंवा तुमच्या सध्याच्या पेजचे स्क्रीनशॉट काढून OCR करा.
-    </p>
-    <button class="btn" onclick="window.open('https://ais-dev-tytpmka3k5pnccgi7ocix2-766376228082.asia-east1.run.app')">
-        Open Full App
-    </button>
+    <div class="content">
+        <p class="instruction">
+            कोणत्याही इमेजमधून मजकूर काढण्यासाठी "Open Dashboard" बटणावर क्लिक करा आणि इमेज अपलोड करा.
+        </p>
+        <button class="btn" id="openBtn">
+            Open Dashboard
+        </button>
+    </div>
+    <div class="footer">
+        Powered by Google Vision AI
+    </div>
+    <script>
+        document.getElementById('openBtn').addEventListener('click', () => {
+            window.open('https://ais-dev-tytpmka3k5pnccgi7ocix2-766376228082.asia-east1.run.app', '_blank');
+        });
+    </script>
 </body>
 </html>
